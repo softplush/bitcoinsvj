@@ -112,8 +112,6 @@ public abstract class NetworkParameters {
     protected HttpDiscovery.Details[] httpSeeds = {};
     protected Map<Integer, Sha256Hash> checkpoints = new HashMap<>();
     protected volatile transient MessageSerializer defaultSerializer = null;
-    protected String cashAddrPrefix;
-    protected String simpleledgerPrefix;
 
     protected NetworkParameters() {
         alertSigningKey = SATOSHI_KEY;
@@ -509,14 +507,6 @@ public abstract class NetworkParameters {
     }
 
     public abstract int getProtocolVersionNum(final ProtocolVersion version);
-
-    public String getCashAddrPrefix() {
-        return cashAddrPrefix;
-    }
-
-    public String getSimpleledgerPrefix() {
-        return simpleledgerPrefix;
-    }
 
     public static enum ProtocolVersion {
         MINIMUM(70000),
