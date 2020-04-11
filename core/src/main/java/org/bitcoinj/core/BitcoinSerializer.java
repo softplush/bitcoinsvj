@@ -260,6 +260,8 @@ public class BitcoinSerializer extends MessageSerializer {
             return new SendHeadersMessage(params, payloadBytes);
         } else if (command.equals("feefilter")) {
             return new FeeFilterMessage(params, payloadBytes);
+        }  else if (command.equals("protoconf")) {
+            return new ProtoconfMessage(params, payloadBytes);
         } else {
             log.warn("No support for deserializing message with name {}", command);
             return new UnknownMessage(params, command, payloadBytes);

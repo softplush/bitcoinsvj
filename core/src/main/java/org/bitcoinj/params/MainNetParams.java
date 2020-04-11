@@ -85,8 +85,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
 
         dnsSeeds = new String[] {
                 "seed.bitcoinsv.io",
-                "seed.cascharia.com",
-                "seed.satoshivision.network"
+                "seed.cascharia.com"
         };
 
         httpSeeds = null;
